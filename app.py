@@ -26,6 +26,7 @@ if st.button("Submit"):
          prediction = response.json()
          st.success(prediction["prediction"])
      else:
+
          st.error(str(status_code) + " Error")
 
          
