@@ -37,7 +37,7 @@ paths:
               - artist_name
               - song_title
     responses:
-      '200':å
+      '200':
         description: "Successful Response"
         content:
           application/json:
