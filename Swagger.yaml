@@ -1,0 +1,51 @@
+openapi: 3.0.1
+
+info:
+  title: Music Sentiment Analyzer 
+  version: 1.0.1
+  contact:
+    name: lyubah
+  description: |
+    Classify the emotion of a song using a pretrained BERT model: a tranformer based NLP model! 
+    How to use:
+    Input the a song title and the artist's name.
+  
+servers:
+  - url: https://master-music-sentiment-analysis-lyubah.endpoint.ainize.ai
+
+paths:
+  post:
+    requestBody:
+      required: true
+      description: |
+        This request will predict the sentiment of your song using HuggingFace pretrained BERT model
+        curl example
+            curl -X POST " https://master-music-sentiment-analysis-lyubah.endpoint.ainize.ai"
+            -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "base_text=one day"
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              artist_name:
+                type: string
+                description: "please insert arist"
+              song_title: 
+                type: sring
+                description: "please insert song"
+            required:
+              - artist_name
+              - song_title
+    responses:
+      '200':
+        description: "Successful Response"
+        content:
+          application/json:
+            schema:
+              type: object
+      '400':
+        description: "Bad Request Error"
+      '429':
+        description: "Too many requests"
+      '500':
+        description: "Server-side Error"
