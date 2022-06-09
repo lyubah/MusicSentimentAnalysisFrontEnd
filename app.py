@@ -5,7 +5,7 @@ import streamlit as st
 
 
 def send_request(song_title,artist_name):
-    api_url = 'https://master-music-sentiment-analysis-lyubah.endpoint.ainize.ai/predict'
+    api_url = "https://main-music-sentiment-analysis-front-end-lyubah.endpoint.ainize.ai/predict" 
     files = {'song_title':(None, song_title) ,
     'artist_name':(None, artist_name), 
     }
