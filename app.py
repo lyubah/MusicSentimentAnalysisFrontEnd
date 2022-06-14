@@ -4,8 +4,8 @@ import streamlit as st
 
 
 def send_request(song_title,artist_name):
-    api_url = "https://main-music-sentiment-analysis-front-end-lyubah.endpoint.ainize.ai/predict" 
-    # api_url = "http://localhost:5000/predict" 
+    # api_url = "https://main-music-sentiment-analysis-front-end-lyubah.endpoint.ainize.ai/predict" 
+    api_url = "http://localhost:8080/predict" 
     data = {'song_title':(None, song_title) ,
     'artist_name':(None, artist_name), 
     }
