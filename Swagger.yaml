@@ -11,7 +11,8 @@ info:
     Input a song title and the artist.
   
 servers:
-  - url: https://main-music-sentiment-analysis-front-end-lyubah.endpoint.ainize.ai
+  - url: https://main-music-sentiment-analysis-front-end-lyubah.endpoint.ainize.ai/
+  - localhost: 
 
 paths:
 /predict:
