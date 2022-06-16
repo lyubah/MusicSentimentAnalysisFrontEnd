@@ -12,10 +12,10 @@ info:
   
 servers:
   - url: https://main-music-sentiment-analysis-front-end-lyubah.endpoint.ainize.ai/
-  - localhost: 
+  - localhost: 8051
 
 paths:
-/predict:
+  /predict: 
   post:
     requestBody:
       required: true

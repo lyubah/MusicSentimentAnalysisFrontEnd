@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-EXPOSE 8501
+EXPOSE 8051
 
 RUN python3 -m pip install -r requirements.txt
 
-CMD ["run", "app.py"]
+CMD ["streamlit","run", "app.py"]
