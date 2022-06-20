@@ -6,6 +6,6 @@ COPY . .
 
 EXPOSE 8501
 
-RUN pip install -r requirementsV2.txt
+RUN pip install -r requirements.txt
 
 CMD ["streamlit","run", "app.py"]
