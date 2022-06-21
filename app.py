@@ -1,9 +1,6 @@
 import requests
 import streamlit as st
 
-
-
-
 def send_request(song_title,artist_name):
     api_url = "https://master-music-sentiment-analysis-lyubah.endpoint.ainize.ai/predict" 
     data = {'song_title':(None, song_title) ,
@@ -26,7 +23,8 @@ if st.button("Submit"):
         prediction = response.json()
         st.success(prediction["output"])
     else:
-
-        st.error(str(status_code) + " Error")
+        if status_code == 500:
+            st.error(str(status_code) + " Error")
+            st.error("Try again! Make sure you check the spelling")
 
          
